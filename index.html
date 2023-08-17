@@ -3,42 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Biblioteca</title>
 </head>
 <body>
+
+    <div class="conteiner">
+        <header id="header">
+            <h1>Cadastro de livros</h1>
+        </header>
+
     
-    <h1>Cadastro de livros</h1>
-    <input type="text" placeholder="Nome" id="nomeLivro">
-    <input type="text" placeholder="Autor" id="autorLivro">
-    <input type="number" placeholder="Ano"  id="anoLivro">
-    <button onclick="adicionar()">Adicionar Livro</button>
-    <button onclick="mostrarLivros()">Mostrar</button>
+        <div class="cadastro">
 
-    <script>
+            <div class="input">
+                <input type="text" placeholder="Nome" id="nomeLivro">
+                <input type="text" placeholder="Autor" id="autorLivro">
+                <input type="number" placeholder="Ano"  id="anoLivro">
+            </div>
 
-        let biblioteca = []
+            <div class="enviar">
+                <button onclick="adicionar()">Adicionar Livro</button>
+                <button onclick="mostrarLivros()">Mostrar</button>
+            </div>
 
-        function cadastro(nome, autor, ano){
-            var livro = {
-                titulo: nome,
-                autor: autor,
-                ano: ano
-            };
-            biblioteca.push(livro)
-        }
-
-        function adicionar(){
-            let nome = document.getElementById("nomeLivro").value;
-            let autor = document.getElementById("autorLivro").value;
-            let ano = document.getElementById("anoLivro").value
-            cadastro(nome, autor, ano);
-        }
-
-        function mostrarLivros(){
-            alert(`resultado:${biblioteca[0].titulo}`);
-        }
-
-    </script>
-
+            <ul id="mostra"></ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+   
 </body>
 </html>
