@@ -48,19 +48,17 @@ button{
     display: flex;
     justify-content: space-around;
     width: 100%;
-    margin: 100px 0 75px;
-}
+    margin: 100px 0 75px;}
 .enviar{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;  
-}
+    align-items: center;  }
 button{
     margin-top: 20px ;
     cursor: pointer;}
 
-@keyframes corBtn{
+@keyframes corBtn {
 
     0%{
         background-color: #1e1e1e;
@@ -70,10 +68,19 @@ button{
     100%{
         background-color: orangered ;
         color: #fff;
-    }
-}
+    }}
 
-button :hover
+button:hover{
+    animation: corBtn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;}
+#listaLivros,
+#numLivros,
+#mensagem{
+    font:400 20px Arial,sans-serif;
+    color: #fff;}
+
+
 
 
 

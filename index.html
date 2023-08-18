@@ -23,12 +23,26 @@
             </div>
 
             <div class="enviar">
-                <button onclick="adicionar()">Adicionar Livro</button>
-                <button onclick="mostrarLivros()">Mostrar</button>
+                <button class="btn" onclick="adicionarLivro()">Adicionar Livro</button>
+                <button class="btn" onclick="mostrarLivros()">Mostrar</button>
+                <button class="btn" onclick="excluirLivro()">Excluir livros</button>
             </div>
 
-            <ul id="mostra"></ul>
+            <div class="conteudo">
+                <p id="mensagem"></p>
+                <p id="numLivros">Número de livros cadastrados: </p>
+                <ul id="listaLivros"></ul>
+            </div>
         </div>
+
+        <div class="carrossel">
+            <img id="carrosselImagem" src="" alt="Imagem do Carrossel">
+            <div class="botao">
+                <button id="anterior">Anterior</button>
+                <button id="proximo">Próxima</button>
+            </div>
+        </div>  
+
     </div>
     
     <script src="script.js"></script>
