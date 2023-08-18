@@ -79,7 +79,13 @@ button:hover{
 #mensagem{
     font:400 20px Arial,sans-serif;
     color: #fff;}
-
+.conteudo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+}
 
 
 

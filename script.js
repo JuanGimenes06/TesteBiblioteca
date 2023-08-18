@@ -12,8 +12,8 @@
                 limparCampos();
                 exibirMensagem("");
                 atualizarNumLivros();
-                fadeIn();
                 carregar();
+                AdicionarIMG();
             } else {
                 exibirMensagem("Cadastre um livro");
         }}
@@ -56,46 +56,43 @@
             numLivrosElemento.textContent = `Número de livros cadastrados: ${numLivros}`;
         }
 
+        function deletarIMG(){
+            
+        }
+
         function excluirLivro() {
             if (biblioteca.length > 0) {
                 biblioteca.pop();
                 atualizarNumLivros();
                 mostrarLivros();
+                deletarIMG();
                 carregar();
             }
         }
 
         let imgIndice = 0;
-        const IMAGENS = ['Imagem1.png', 'Imagem2.png', 'Imagem3.png', 'Imagem4.png'];
+        let IMAGENS = [];
         let prevButton = document.getElementById('anterior');
         let nextButton = document.getElementById('proximo');
         const IMG = document.getElementById('carrosselImagem');
 
+        function AdicionarIMG(){
+            IMAGENS.push("imagem"+(biblioteca.length)+".png")
+            carregar()
+        }   
+
         function carregar() {
-            IMG.style.opacity = 0;
-            fadeIn();
-            IMG.src = biblioteca[biblioteca.length - 1].imagem;
+            IMG.src = IMAGENS[imgIndice];
             }
 
-        function fadeIn() {
-    let opacidade = 0;
-
-    const fadeInterval = setInterval(() => {
-        opacidade += 0.03;
-        IMG.style.opacity = opacidade;
-
-        if (opacidade >= 1) {
-            clearInterval(fadeInterval);
-        }
-    }, 20);
-        }
+    
 
         prevButton.addEventListener('click', () => {
         if (imgIndice > 0) {
             --imgIndice;
         carregar();
-    }
-        });
+        }
+        }); 
 
         nextButton.addEventListener('click', () => {
         const limite = IMAGENS.length - 1;
@@ -105,9 +102,5 @@
         }
         });
 
-        
 
-
-
-        carregar();
        
