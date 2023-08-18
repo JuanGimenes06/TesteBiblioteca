@@ -25,7 +25,7 @@ a{
     align-items: center;
     justify-content: space-between;
     background: linear-gradient(to bottom right, #ff0000, #0000ff);
-    height: 100vh;
+    height: 200vh;
     flex-direction: column;}
 .cadastro{
     width: 70%;
@@ -35,7 +35,9 @@ a{
     border-radius: 15px;
     margin-bottom: 15px;
     display: flex;
-    flex-direction: column;}
+    flex-direction: column;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;}
 input,
 button{
     width: 200px;
@@ -70,6 +72,18 @@ button{
         color: #fff;
     }}
 
+@keyframes excluir {
+    0%{
+        background-color: #1e1e1e;
+        color: #fff;
+    }
+
+    100%{
+        background-color: red ;
+        color: #fff;
+    }
+}
+
 button:hover{
     animation: corBtn;
     animation-duration: 1s;
@@ -84,11 +98,26 @@ button:hover{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 30px 0;
-}
-
-
-
+    margin: 30px 0;}
+.carrossel{
+    width: 70%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e1e1e;
+    opacity: 0.8;}
+#carrosselImagem{
+    width: auto;
+    height: 70vh;
+    border-radius: 15px;}
+.excluir:hover{
+    animation-name: excluir;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;}
 
 
 

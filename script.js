@@ -57,7 +57,7 @@
         }
 
         function deletarIMG(){
-            
+            IMAGENS.splice((biblioteca.length-1),1)
         }
 
         function excluirLivro() {
@@ -77,9 +77,9 @@
         const IMG = document.getElementById('carrosselImagem');
 
         function AdicionarIMG(){
-            IMAGENS.push("imagem"+(biblioteca.length)+".png")
+            IMAGENS.push("img/imagem"+(biblioteca.length)+".png")
             carregar()
-        }   
+        }       
 
         function carregar() {
             IMG.src = IMAGENS[imgIndice];
